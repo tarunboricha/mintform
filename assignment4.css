@@ -1,23 +1,55 @@
 body {
     margin: 0;
+    height: 100hv;
+    width: 100wv;
     display: flex;
     justify-content: center;
     margin-top: 2%;
-    font-family: Arial, sans-serif;
+}
+
+b {
+    font-size: 2rem;
+}
+
+input {
+    width: 100%;
+    height: 2.5rem;
+}
+
+h4 {
+    margin: 0;
+    font-weight: 900;
+}
+
+span {
+    cursor: pointer;
 }
 
 .brand {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 20px;
 }
 
-.butn {
+button.butn {
+    width: 100%;
+}
+
+.signupbtn {
+    cursor: pointer;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: smaller;
+    border: 1px solid;
+    height: 2.5rem;
+    background-color: black;
+    color: white;
+    width: 40%;
 }
 
-.signup,
-.login {
+.login,
+.signup {
+    background-color: white;
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -25,28 +57,39 @@ body {
     width: 50%;
     border: 1px solid;
     height: 60%;
-    background-color: white;
+    position: absolute;
+    bottom: -1px;
 }
 
 .signup {
-    border-bottom: none;
+    border-bottom: 1px solid white;
+}
+
+.butn {
+    position: relative;
+    width: 35%;
+    display: flex;
 }
 
 .center {
     width: 48%;
+    border: 1px solid;
     padding: 1% 2%;
     background-color: rgb(237, 237, 237);
 }
 
 .containerr {
     background-color: white;
+    display: flex;
+    flex-direction: column;
     border: 1px solid;
     padding: 2%;
-    margin-bottom: 20px;
 }
 
 .leftcont {
-    width: 70%;
+    position: relative;
+    left: 0;
+    width: 69%;
 }
 
 .formcontent {
@@ -55,107 +98,162 @@ body {
 }
 
 .rightcont {
-    width: 30%;
+    position: relative;
+    left: 7%;
 }
 
 .heading {
-    margin-bottom: 20px;
-    font-size: 1.8rem;
+    margin-bottom: 4%;
 }
 
-.input-group {
-    margin-bottom: 20px;
+.youremail,
+.confirmemail,
+.country,
+.zipcode,
+.pass,
+.confirmpass,
+.terms {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 4%;
 }
 
-.input-group label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-input[type="email"],
-input[type="password"],
-select {
-    width: 100%;
-    height: 40px;
-}
-
-.signupbtnsec {
-    text-align: right;
-}
-
-.signupbtn {
-    cursor: pointer;
-    display: inline-block;
-    font-size: 1rem;
-    border: none;
-    height: 40px;
-    width: 40%;
-    background-color: black;
-    color: white;
+.labl {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 45%;
 }
 
 .formdesc {
-    margin-top: 20px;
+    font-size: smaller;
+    width: 71%;
+    font-weight: bold;
+    line-height: 1;
+    margin-top: 3%;
 }
 
-.formdesc p {
-    margin-bottom: 10px;
+.inpt {
+    width: 55%;
+    margin-left: 5%;
 }
 
 .footer {
-    margin-top: 20px;
+    margin-top: 1%;
+}
+
+#loginterms {
+    margin-bottom: 2%;
+    justify-content: space-between;
+    padding-left: 20%;
 }
 
 .footername {
+    font-size: smaller;
     display: flex;
     justify-content: space-evenly;
     padding: 0 5%;
 }
 
-.footername span {
-    cursor: pointer;
-}
-
 .footerbtn {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 1%;
+}
+
+.iagree {
+    text-wrap: nowrap;
+    position: relative;
+    top: 30%;
+    left: 4%;
+    font-size: smaller;
+}
+
+.signupbtnsec {
+    padding-left: 47.5%;
 }
 
 .btn1,
 .btn2 {
     cursor: pointer;
+    background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
     border: 1px solid;
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: bold;
     border-radius: 0.4rem;
     line-height: 1;
-    padding: 5px 10px;
-    margin-right: 20px;
+    padding: 0.5%;
+}
+
+.countryselec {
+    width: 100%;
+    height: 2.5rem;
+    background-color: rgb(237, 237, 237);
+}
+
+.btn1 {
+    width: 15%;
+}
+
+.btn2 {
+    width: 25%;
+}
+
+p {
+    margin: 0;
+}
+
+#login {
+    display: none;
 }
 
 @media only screen and (max-width: 600px) {
+    body {
+        margin: 0;
+    }
+
     .center {
         width: 100%;
         padding: 1%;
     }
 
-    input[type="email"],
-    input[type="password"],
-    select {
-        height: 30px;
+    input {
+        width: 100%;
+        height: 1.7rem;
     }
 
-    .input-group label {
+    .inpt {
+        width: 55%;
+        margin-left: 5%;
+    }
+
+    h4 {
+        font-size: smaller;
+    }
+
+    .labl {
+        font-size: smaller;
+        display: flex;
+        flex-direction: row-reverse;
+        width: 50%;
+    }
+
+    .formdesc {
+        font-size: 0.92rem;
+        width: 71%;
+        font-weight: bold;
+        line-height: 1;
+        margin-top: 3%;
+    }
+
+    .iagree {
         font-size: 0.9rem;
     }
 
     .signupbtn {
-        height: 30px;
+        height: 20%;
         width: 60%;
     }
 
@@ -165,6 +263,23 @@ select {
 
     .btn2 {
         width: 30%;
+    }
+
+    .terms {
+        padding-left: 5%;
+    }
+
+    .signupbtnsec {
+        padding-left: 50%;
+    }
+
+    #loginterms {
+        font-size: 0.9rem;
+    }
+
+    .countryselec {
+        font-size: smaller;
+        height: 2rem;
     }
 }
 
