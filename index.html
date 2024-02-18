@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mint.com</title>
+    <title>Document</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assignment4.css">
 </head>
@@ -12,56 +12,64 @@
 <body>
     <div class="center">
         <div class="brand">
-            <div class="brandname" style="font-size: 2.8rem;">mint.com</div>
+            <div class="brandname" style="font-size: 280%">mint.com</div>
             <div class="butn">
                 <div class="signup" onclick="showSignup()">Sign Up</div>
-                <div class="login" onclick="showLogin()">Log In</div>
+                <div class="login" onclick="showLogin()"
+                    style="left: 50%; border-left: 0; background-color: rgb(184, 184, 184);">Log In</div>
             </div>
         </div>
         <div class="containerr" id="signup">
             <div class="heading">
-                <b>Create a new account</b>
+                <b>create a new account</b>
             </div>
             <div class="formcontent">
                 <div class="leftcont">
                     <form onsubmit="return false" class="pure-form">
                         <fieldset>
-                            <div class="input-group">
-                                <label for="email">Your Email</label>
-                                <input id="email" type="email" required>
+                            <div class="youremail">
+                                <div class="labl">Your Email</div>
+                                <div class="inpt"><input id="email" type="email" required></div>
                             </div>
-                            <div class="input-group">
-                                <label for="confemail">Confirm Email</label>
-                                <input id="confemail" type="email" required>
+                            <div class="confirmemail">
+                                <div class="labl">Confirm Email</div>
+                                <div class="inpt"><input id="confemail" type="email" required></div>
                             </div>
-                            <div class="input-group">
-                                <label for="country">Country</label>
-                                <select class="countryselec" id="country" required>
-                                    <option value="" disabled selected hidden>Please Select</option>
-                                    <option value="India">India</option>
-                                    <option value="USA">USA</option>
-                                    <option value="UK">UK</option>
-                                    <option value="Australia">Australia</option>
-                                </select>
+                            <div class="country">
+                                <div class="labl">Country</div>
+                                <div class="inpt">
+                                    <select class="countryselec" name="" id="contry">
+                                        <option value="" disabled selected hidden>Please Select</option>
+                                        <option value="India">India</option>
+                                        <option value="USA">USA</option>
+                                        <option value="UK">UK</option>
+                                        <option value="Australia">Australia</option>
+                                    </select required>
+                                </div>
                             </div>
-                            <div class="input-group">
-                                <label for="zipcode">Zip Code</label>
-                                <input id="zipcode" type="number" required>
+                            <div class="zipcode">
+                                <div class="labl">Zip Code</div>
+                                <div class="inpt"><input id="zipcode" type="number" required></div>
                             </div>
-                            <div class="input-group">
-                                <label for="pass">Password</label>
-                                <input id="pass" type="password" required>
+                            <div class="pass">
+                                <div class="labl">Password</div>
+                                <div class="inpt"><input id="pass" type="password" required></div>
                             </div>
-                            <div class="input-group">
-                                <label for="confpass">Confirm Password</label>
-                                <input id="confpass" type="password" required>
+                            <div class="confirmpass" style="margin-bottom: 1%;">
+                                <div class="labl">Confirm Password</div>
+                                <div class="inpt"><input id="confpass" type="password" required></div>
                             </div>
-                            <div class="terms">
-                                <input type="checkbox" required id="termsandcond">
-                                <label for="termsandcond">Yes, I agree to the Mint.com <span style="color: rgb(46, 79, 224);">Terms of Use</span></label>
+                            <div class="terms" style="margin-bottom: 2%;">
+                                <div class="labl"></div>
+                                <div class="inpt" style="display: flex; padding-left: 2.6%;"><input
+                                        style="border-radius: 0;" type="checkbox" required id="termsandcond">
+                                    <div class="iagree">
+                                        Yes, I agree yo the Mint.com <span style="color: rgb(46, 79, 224);">Terms of
+                                            Use</span></div>
+                                </div>
                             </div>
                             <div class="signupbtnsec">
-                                <button type="submit" onclick="validate()" class="signupbtn">Sign Up</button>
+                                <button type="submit" onclick="validate()" class="signupbtn"> Sign Up</button>
                             </div>
                         </fieldset>
                     </form>
@@ -72,36 +80,47 @@
                         <h4>Mint.com</h4>
                     </div>
                     <div class="formdesc">
-                        <p>- See all your accounts in one place</p>
-                        <p>- Set a budget and pay down your debt</p>
-                        <p>- Find the best ways to grow your money</p>
-                        <p>- Stay safe and secure</p>
+                        <div style="display: flex;">
+                            <div style="margin-right: 3%;">-</div>See all your accounts in one place
+                        </div>
+                        <div style="display: flex;">
+                            <div style="margin-right: 3%;">-</div>Set a budget and pay down your debt
+                        </div>
+                        <div style="display: flex;">
+                            <div style="margin-right: 3%;">-</div>Find the best ways to grow your money
+                        </div>
+                        <div style="display: flex;">
+                            <div style="margin-right: 3%;">-</div>Stay safe and secure
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="containerr" id="login">
             <div class="heading">
-                <b>Login into your account</b>
+                <b>login into your account</b>
             </div>
-            <div class="formcontent">
+            <div class="formcontent" style="margin-bottom: 6%;">
                 <div class="leftcont">
                     <form onsubmit="return false">
-                        <div class="input-group">
-                            <label for="loginemail">Your Email</label>
-                            <input id="loginemail" type="email" required>
+                        <div class="youremail">
+                            <div class="labl">Your Email</div>
+                            <div class="inpt"><input id="loginemail" type="email" required></div>
                         </div>
-                        <div class="input-group">
-                            <label for="loginpass">Password</label>
-                            <input id="loginpass" type="password" required>
+                        <div class="pass">
+                            <div class="labl">Password</div>
+                            <div class="inpt"><input id="loginpass" type="password" required></div>
                         </div>
                         <div class="terms" id="loginterms">
-                            <input type="checkbox">
-                            <label for="rememberme">Remember me</label>
-                            <span style="cursor: pointer; color: rgb(46, 79, 224);">Forgot Password?</span>
+                            <div style="display: flex; align-items: center;"><input
+                                    style="height: 82%; margin: 0; margin-right: 6%;" type="checkbox">
+                                <div style="width: 100%; text-wrap: nowrap;">Remember me</div>
+                            </div>
+                            <div style="cursor: pointer; display: flex; align-items: center; color: rgb(46, 79, 224);">
+                                Forgot Password?</div>
                         </div>
                         <div class="signupbtnsec">
-                            <button type="submit" class="signupbtn" onclick="login()">Log In</button>
+                            <button type="submit" class="signupbtn" onclick="login()"> Log In</button>
                         </div>
                     </form>
                 </div>
@@ -111,10 +130,18 @@
                         <h4>Mint.com</h4>
                     </div>
                     <div class="formdesc">
-                        <p>- See all your accounts in one place</p>
-                        <p>- Set a budget and pay down your debt</p>
-                        <p>- Find the best ways to grow your money</p>
-                        <p>- Stay safe and secure</p>
+                        <div style="display: flex;">
+                            <div style="margin-right: 3%;">-</div>See all your accounts in one place
+                        </div>
+                        <div style="display: flex;">
+                            <div style="margin-right: 3%;">-</div>Set a budget and pay down your debt
+                        </div>
+                        <div style="display: flex;">
+                            <div style="margin-right: 3%;">-</div>Find the best ways to grow your money
+                        </div>
+                        <div style="display: flex;">
+                            <div style="margin-right: 3%;">-</div>Stay safe and secure
+                        </div>
                     </div>
                 </div>
             </div>
@@ -128,11 +155,11 @@
                 <span>Terms of Use</span>
             </div>
             <div class="footerbtn">
-                <div class="btn1">
+                <div class="btn1" style="margin-right: 10%;">
                     <p>Norton</p>
                     <p>SECURED</p>
                 </div>
-                <div class="btn2">
+                <div class="btn2" style="align-items: baseline; padding-left: 2%;">
                     <p>TRUSTe</p>
                     <p>CERTIFIED PRIVACY</p>
                 </div>
@@ -141,4 +168,5 @@
     </div>
     <script src="./assignment4.js"></script>
 </body>
+
 </html>
